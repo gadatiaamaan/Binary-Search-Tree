@@ -1,4 +1,4 @@
-## Binary Search Tree Program
+## Binary Search Tree Program (C++)
 
 ### Overview
 Welcome to the Binary Search Tree program! This program allows you to build a balanced binary search tree from a set of integers and find the k-th smallest element in the tree.
@@ -59,6 +59,16 @@ Binary Tree:
 This value is: 20
 $ make clean
 ```
+
+### Technologies, Algorithms, and Concepts Used
+This program utilizes the following technologies, algorithms, and concepts:
+- **C++**: The program is written in the C++ programming language.
+- **Binary Search Tree (BST)**: The program implements a binary search tree data structure to efficiently store and organize the input elements.
+- **Balanced BST Construction**: It employs a method to construct a balanced binary search tree from a sorted array, ensuring optimal search and insertion times.
+- **Inorder Traversal**: The program performs an inorder traversal of the BST to display its elements in sorted order.
+- **Recursive Algorithms**: The construction of the BST and the inorder traversal utilize recursive algorithms for efficient implementation.
+- **Pointer Manipulation**: The program effectively utilizes pointers to create and traverse nodes within the binary search tree.
+- **Divide and Conquer Strategy**: The process of building a balanced BST from a sorted array employs a divide and conquer strategy to efficiently partition the array and construct the tree.
 
 ### Have Fun!
 Enjoy exploring the binary search tree program! If you have any questions or feedback, feel free to reach out.

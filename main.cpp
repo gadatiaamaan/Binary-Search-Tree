@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdlib>
 
+using namespace std;
+
 // Define the structure for a node in the BST
 struct node {
     int value;
@@ -51,7 +53,7 @@ void inorderTraversal(node* root) {
         return;
     }
     inorderTraversal(root->left);
-    std::cout << root->value << " ";
+    cout << root->value << " ";
     inorderTraversal(root->right);
 }
 
@@ -62,11 +64,11 @@ void printBST(node* root, int space = 0, int count = 5) {
     }
     space += count;
     printBST(root->right, space);
-    std::cout << std::endl;
+    cout << endl;
     for (int i = count; i < space; i++) {
-        std::cout << " ";
+        cout << " ";
     }
-    std::cout << root->value << "\n";
+    cout << root->value << "\n";
     printBST(root->left, space);
 }
 
@@ -75,21 +77,21 @@ int main() {
     int n = sizeof(arr) / sizeof(arr[0]);
     node* root = buildBalancedBST(arr, 0, n - 1);
 
-    std::cout << "BST Inorder Traversal: ";
+    cout << "BST Inorder Traversal: ";
     inorderTraversal(root);
-    std::cout << std::endl;
+    cout << endl;
 
-    std::cout << "Binary Tree:" << std::endl;
+    cout << "Binary Tree:" << endl;
     printBST(root);
 
     int k;
-    std::cout << "Which smallest element you would like to see: ";
-    std::cin >> k;
+    cout << "Which smallest element you would like to see: ";
+    cin >> k;
     int kthSmallest = kthSmallestElement(root, k);
     if (kthSmallest != -1) {
-        std::cout << "This value is: " << kthSmallest << std::endl;
+        cout << "This value is: " << kthSmallest << endl;
     } else {
-        std::cout << "Invalid input or k out of range." << std::endl;
+        cout << "Invalid input or k out of range." << endl;
     }
 
     return 0;
